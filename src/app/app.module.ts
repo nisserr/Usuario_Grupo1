@@ -12,6 +12,7 @@ import { ClimaComponent } from './clima/clima.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UsuarioComponent } from './usuario/usuario.component';
     PersonalComponent,
     ClimaComponent,
     EmpleadosComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    BienvenidoComponent
   ],
   imports: [
     BrowserModule,
