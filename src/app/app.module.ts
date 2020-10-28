@@ -14,6 +14,7 @@ import { EmpleadosComponent } from './empleados/empleados.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { RegistroComponent } from './registro/registro.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RegistroComponent } from './registro/registro.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     AppMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
