@@ -11,13 +11,15 @@ import { ClimaComponent } from './clima/clima.component';
 //modulo para servicios
 import { HttpClientModule } from '@angular/common/http';
 import { EmpleadosComponent } from './empleados/empleados.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonalComponent,
     ClimaComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
