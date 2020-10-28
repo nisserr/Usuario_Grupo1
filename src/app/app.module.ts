@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonalComponent } from './personal/personal.component';
+
 import { AppMaterialModule } from './app-material/app-material.module';
 import { ClimaComponent } from './clima/clima.component';
 
@@ -13,15 +13,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonalComponent,
     ClimaComponent,
     EmpleadosComponent,
     UsuarioComponent,
-    BienvenidoComponent
+    BienvenidoComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
