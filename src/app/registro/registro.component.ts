@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-registro',
