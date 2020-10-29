@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../interfaces/usuario';
 import { Observable } from 'rxjs';
-import { HttpClientModule } from "@angular/common/http";
+
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,18 +12,25 @@ export class UsuarioService {
 
   apiURL = 'http://localhost:8080/api/usuarios'
 
+   httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+    })}
+
   constructor(private http: HttpClient) { }
 
   getUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.apiURL);
   }
   
-  actualizarcorreo(correo: string){
-    return this.http.get(`${this.apiURL}/actualizar/`);
+  actualizarcorreo(correo: string,){
+    return this.http.put(`${this.apiURL}/actualizar/`,{correo: correo});
    }
 
    deleteusuario(rut : string){
-     return this.http.delete(`${this.apiURL}/${rut}/`);
+     console.log('hola')
+     return this.http.delete(`${this.apiURL}/${rut}/`,this.httpOptions);
+
 
    }
    

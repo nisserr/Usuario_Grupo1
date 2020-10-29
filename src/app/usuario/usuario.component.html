@@ -30,7 +30,7 @@
       Borrar
     </mat-header-cell>
     <mat-cell *matCellDef="let usuario">
-      <button mat-raised-button color="warn">Borrar</button>
+      <button (click)="deleteUsuario(usuario.rut)" mat-raised-button color="warn">Borrar</button>
     </mat-cell>
 
   </ng-container>
@@ -39,7 +39,7 @@
       Modificar
     </mat-header-cell>
     <mat-cell *matCellDef="let usuario">
-      <button mat-raised-button color="accent">Modificar</button>
+      <button  (click)="actualizarcorreo(usuario.correo)" mat-raised-button color="accent">Modificar</button>
     </mat-cell>
 
   </ng-container>

@@ -34,4 +34,13 @@ export class UsuarioComponent implements OnInit {
       )
   }
 
+  deleteUsuario(rut){
+    this.UsuarioServ.deleteusuario(rut).subscribe(x => console.log('kjhak'))
+    console.log(rut);
+  }
+
+  actualizarcorreo(correo){
+    this.UsuarioServ.actualizarcorreo(correo).subscribe(x => console.log('actualizarcorreo'))
+  }
+
 }

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { ClimaComponent } from './clima/clima.component';
 
+
 //modulo para servicios
 import { HttpClientModule } from '@angular/common/http';
 import { EmpleadosComponent } from './empleados/empleados.component';
