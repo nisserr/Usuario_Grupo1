@@ -8,23 +8,41 @@
     </mat-cell>
   </ng-container>
   <ng-container matColumnDef="correo">
-      <mat-header-cell *matHeaderCellDef>
-        Correo
-      </mat-header-cell>
-      <mat-cell *matCellDef="let usuario">
-        {{usuario.correo}}
-      </mat-cell>
-    </ng-container>
-<ng-container matColumnDef="contraseña">
-      <mat-header-cell *matHeaderCellDef>
-        Contraseña
-      </mat-header-cell>
-      <mat-cell *matCellDef="let usuario">
-        {{usuario.contrasena}}
-      </mat-cell>
-      
-      </ng-container>
-    
+    <mat-header-cell *matHeaderCellDef>
+      Correo
+    </mat-header-cell>
+    <mat-cell *matCellDef="let usuario">
+      {{usuario.correo}}
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="contraseña">
+    <mat-header-cell *matHeaderCellDef>
+      Contraseña
+    </mat-header-cell>
+    <mat-cell *matCellDef="let usuario">
+      {{usuario.contrasena}}
+    </mat-cell>
+
+  </ng-container>
+
+  <ng-container matColumnDef="borrar">
+    <mat-header-cell *matHeaderCellDef>
+      Borrar
+    </mat-header-cell>
+    <mat-cell *matCellDef="let usuario">
+      <button mat-raised-button color="warn">Borrar</button>
+    </mat-cell>
+
+  </ng-container>
+<ng-container matColumnDef="modificar">
+    <mat-header-cell *matHeaderCellDef>
+      Modificar
+    </mat-header-cell>
+    <mat-cell *matCellDef="let usuario">
+      <button mat-raised-button color="accent">Modificar</button>
+    </mat-cell>
+
+  </ng-container>
 
 
   <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>

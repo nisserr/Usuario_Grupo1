@@ -14,7 +14,7 @@ export class UsuarioComponent implements OnInit {
 
   constructor(private UsuarioServ: UsuarioService) { }
 
-  columnas = ['rut','correo','contraseña'];
+  columnas = ['rut','correo','contraseña','borrar','modificar'];
 
   ngOnInit(): void {
     this.getUsuarioServ()
