@@ -1,34 +1,31 @@
-
 <mat-table [dataSource]="Usuarios" style="margin: auto" class="mat-elevation-z8">
-    <ng-container matColumnDef="rut">
+  <ng-container matColumnDef="rut">
+    <mat-header-cell *matHeaderCellDef>
+      Rut
+    </mat-header-cell>
+    <mat-cell *matCellDef="let usuario">
+      {{usuario.rut}}
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="correo">
       <mat-header-cell *matHeaderCellDef>
-        Rut
+        Correo
       </mat-header-cell>
       <mat-cell *matCellDef="let usuario">
-        {{usuario.rut}}
+        {{usuario.correo}}
       </mat-cell>
     </ng-container>
-    <ng-container matColumnDef="correo">
-        <mat-header-cell *matHeaderCellDef>
-          Correo
-        </mat-header-cell>
-        <mat-cell *matCellDef="let usuario">
-          {{usuario.correo}}
-        </mat-cell>
+<ng-container matColumnDef="contraseña">
+      <mat-header-cell *matHeaderCellDef>
+        Contraseña
+      </mat-header-cell>
+      <mat-cell *matCellDef="let usuario">
+        {{usuario.contrasena}}
+      </mat-cell>
       </ng-container>
-      <!--
-      <ng-container matColumnDef="contraseña">
-        <mat-header-cell *matHeaderCellDef>
-          Contraseña
-        </mat-header-cell>
-        <mat-cell *matCellDef="let usuario">
-          {{usuario.contraseña}}
-        </mat-cell>
-      </ng-container>
-      -->
+    
 
 
-    <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
-    <mat-row *matRowDef="let fila; columns: columnas"></mat-row>
-  </mat-table>
-  
+  <mat-header-row *matHeaderRowDef="columnas"></mat-header-row>
+  <mat-row *matRowDef="let fila; columns: columnas"></mat-row>
+</mat-table>
