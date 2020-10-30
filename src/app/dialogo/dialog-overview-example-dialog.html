@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Hola</h1>
+<div mat-dialog-content>
+  <p>¿Cuál es el correo nuevo?</p>
+  <mat-form-field>
+    <mat-label>Correo</mat-label>
+    <input matInput [(ngModel)]="data.correo">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <app-usuario #Micompo></app-usuario>
+  
+  <button mat-button (click)="Micompo.actualizarcorreo(data.correo)" [mat-dialog-close]="data.correo" cdkFocusInitial>Ok</button>
+</div>

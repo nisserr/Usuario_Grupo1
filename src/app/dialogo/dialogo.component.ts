@@ -2,7 +2,7 @@ import {Component,OnInit, Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 export interface DialogData {
-  animal: string;
+  correo: string;
   name: string;
 }
 
@@ -15,7 +15,7 @@ export interface DialogData {
 })
 export class DialogoComponent {
 
-  animal: string;
+  correo: string;
   name: string;
 
   constructor(public dialog: MatDialog) {}
@@ -25,12 +25,12 @@ export class DialogoComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '250px',
-      data: {name: this.name, animal: this.animal}
+      data: {name: this.name, correo: this.correo}
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
+      this.correo = result;
     });
   }
 
@@ -38,12 +38,12 @@ export class DialogoComponent {
 
 @Component({
   selector: 'dialog-overview-example-dialog',
-  templateUrl: 'dialogo.component.css',
+  templateUrl: 'dialog-overview-example-dialog.html',
 })
 export class DialogOverviewExampleDialog {
 
   constructor(
-    public dialogRef: MatDialogRef<DialogoComponent>,
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   onNoClick(): void {

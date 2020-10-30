@@ -5,8 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppMaterialModule } from './app-material/app-material.module';
-import { MatButtonModule,} from '@angular/material/button'
-
+import { MatButtonModule,} from '@angular/material/button';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DialogOverviewExampleDialog } from './dialogo/dialogo.component';
 
 //modulo para servicios
 import { HttpClientModule } from '@angular/common/http';
@@ -18,13 +19,16 @@ import { DialogoComponent } from './dialogo/dialogo.component';
 import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     UsuarioComponent,
     BienvenidoComponent,
     RegistroComponent,
-    DialogoComponent
+    DialogoComponent,
+    DialogOverviewExampleDialog
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
     AppRoutingModule,
