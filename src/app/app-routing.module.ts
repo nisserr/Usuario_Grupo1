@@ -1,25 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ClimaComponent } from './clima/clima.component';
-import { EmpleadosComponent } from './empleados/empleados.component';
+
 import { UsuarioComponent } from './usuario/usuario.component';
 import { RegistroComponent } from './registro/registro.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
+import { DialogoComponent } from './dialogo/dialogo.component';
 
 const routes: Routes = [
   {
     path: '',
     component: BienvenidoComponent
   },
-  {
-    path: 'clima',
-    component: ClimaComponent
-  },
-  {
-    path: 'empleados',
-    component: EmpleadosComponent
-  },
+  
   {
     path: 'usuarios',
     component: UsuarioComponent
@@ -27,7 +20,11 @@ const routes: Routes = [
   {
     path: 'registro',
     component: RegistroComponent
-  }
+  },
+   {
+     path: 'dialogo',
+     component: DialogoComponent
+   }
   
 ];
 

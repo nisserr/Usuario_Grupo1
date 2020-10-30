@@ -2,30 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { AppMaterialModule } from './app-material/app-material.module';
-import { ClimaComponent } from './clima/clima.component';
+import { MatButtonModule,} from '@angular/material/button'
 
 
 //modulo para servicios
 import { HttpClientModule } from '@angular/common/http';
-import { EmpleadosComponent } from './empleados/empleados.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { RegistroComponent } from './registro/registro.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DialogoComponent } from './dialogo/dialogo.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClimaComponent,
-    EmpleadosComponent,
     UsuarioComponent,
     BienvenidoComponent,
-    RegistroComponent
+    RegistroComponent,
+    DialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +32,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppMaterialModule,
     HttpClientModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogoComponent]
 })
 export class AppModule { }

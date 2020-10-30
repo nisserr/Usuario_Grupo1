@@ -19,12 +19,15 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) { }
 
+  
+
   getUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.apiURL);
   }
   
-  actualizarcorreo(correo: string,){
-    return this.http.put(`${this.apiURL}/actualizar/`,{correo: correo});
+  actualizarcorreo(correo: string,rut:string){
+    console.log('actualizar')
+    return this.http.put(`${this.apiURL}/actualizar/`,{rut:rut,correo:correo});
    }
 
    deleteusuario(rut : string){

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../interfaces/usuario';
-import { UsuarioService } from '../services/usuario.service'
+import { UsuarioService } from '../services/usuario.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 
 @Component({
@@ -8,9 +9,11 @@ import { UsuarioService } from '../services/usuario.service'
   templateUrl: './usuario.component.html',
   styleUrls: ['./usuario.component.css']
 })
+
 export class UsuarioComponent implements OnInit {
 
   Usuarios: Usuario[];
+
 
   constructor(private UsuarioServ: UsuarioService) { }
 
@@ -33,14 +36,21 @@ export class UsuarioComponent implements OnInit {
         }
       )
   }
+  
 
   deleteUsuario(rut){
     this.UsuarioServ.deleteusuario(rut).subscribe(x => console.log('kjhak'))
     console.log(rut);
   }
 
-  actualizarcorreo(correo){
-    this.UsuarioServ.actualizarcorreo(correo).subscribe(x => console.log('actualizarcorreo'))
+  actualizarcorreo(correo,rut){
+    this.UsuarioServ.actualizarcorreo(correo,rut).subscribe(x => console.log('actualizarcorreo'))
   }
 
+ 
+
+
+
 }
+
+

@@ -32,14 +32,14 @@
     <mat-cell *matCellDef="let usuario">
       <button (click)="deleteUsuario(usuario.rut)" mat-raised-button color="warn">Borrar</button>
     </mat-cell>
-
+<dialog-overview-example #miComponente></dialog-overview-example>
   </ng-container>
 <ng-container matColumnDef="modificar">
     <mat-header-cell *matHeaderCellDef>
       Modificar
     </mat-header-cell>
     <mat-cell *matCellDef="let usuario">
-      <button  (click)="actualizarcorreo(usuario.correo)" mat-raised-button color="accent">Modificar</button>
+      <button  mat-raised-button (click)="miComponente.openDialog()"  color="accent">Modificar</button>
     </mat-cell>
 
   </ng-container>

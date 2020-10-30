@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClimaComponent } from './clima.component';
+import { DialogoComponent } from './dialogo.component';
 
-describe('ClimaComponent', () => {
-  let component: ClimaComponent;
-  let fixture: ComponentFixture<ClimaComponent>;
+describe('DialogoComponent', () => {
+  let component: DialogoComponent;
+  let fixture: ComponentFixture<DialogoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClimaComponent ]
+      declarations: [ DialogoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ClimaComponent);
+    fixture = TestBed.createComponent(DialogoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

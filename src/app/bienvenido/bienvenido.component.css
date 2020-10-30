@@ -1,6 +1,10 @@
-body {
+.container {
      background-color: lightblue;
 
+}
+
+.card {
+     overflow:hidden;
 }
 .barra{
      
@@ -13,4 +17,12 @@ body {
 .container{
   
      padding-top: 15px;
+}
+
+.p1{
+     padding-top: 50px;
+}
+
+.p2{
+     padding-top: 50px;
 }
