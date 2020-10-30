@@ -13,11 +13,16 @@
           <label for="exampleInputPassword1">Contraseña</label>
           <input type="password" class="form-control" id="Password" name="password" placeholder="Contraseña" [(ngModel)]="password">
         </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Rut</label>
+          <input type="text" class="form-control" id="rut" name="password" placeholder="rut" [(ngModel)]="rut">
+        </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Confirma que no eres un robot</label>
         </div>
-        <button (click)="validar()" type="submit" class="btn btn-primary">Validar</button>
+        <button (click)="validar()" type="button" class="btn btn-primary">Validar</button>
+        
       </form>
     </div>
     </div>

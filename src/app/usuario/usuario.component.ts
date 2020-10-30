@@ -47,6 +47,11 @@ export class UsuarioComponent implements OnInit {
     this.UsuarioServ.actualizarcorreo(correo,rut).subscribe(x => console.log('actualizarcorreo'))
   }
 
+  agregarusuario(rut,correo,contraseña){
+    this.UsuarioServ.agregarusuario(rut,correo,contraseña).subscribe(x => console.log('metodoagregar'))
+  }
+
+
  
 
 

@@ -1,9 +1,11 @@
 import {Component,OnInit, Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { UsuarioService} from '../services/usuario.service'
 
 export interface DialogData {
   correo: string;
   name: string;
+  rut: string;
 }
 
 /**
@@ -17,15 +19,16 @@ export class DialogoComponent {
 
   correo: string;
   name: string;
+  rut: string;
 
   constructor(public dialog: MatDialog) {}
 
   ngOnInit (){}
 
-  openDialog(): void {
+  openDialog(rut:string): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '250px',
-      data: {name: this.name, correo: this.correo}
+      data: {}
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -33,6 +36,8 @@ export class DialogoComponent {
       this.correo = result;
     });
   }
+  
+ 
 
 }
 
@@ -44,10 +49,13 @@ export class DialogOverviewExampleDialog {
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,private UsuarioServ:UsuarioService) {}
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+  actualizarcorreo(correo,rut){
+    this.UsuarioServ.actualizarcorreo(correo,rut).subscribe(x => console.log('actualizarcorreo'))
   }
 
 }

@@ -36,6 +36,11 @@ export class UsuarioService {
 
 
    }
+
+   agregarusuario(rut:string,correo:string,contraseña:string){
+     console.log('agregar')
+     return this.http.post(`${this.apiURL}/agregar`,this.httpOptions);
+   }
    
 
 }

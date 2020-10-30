@@ -4,12 +4,18 @@
   <mat-form-field>
     <mat-label>Correo</mat-label>
     <input matInput [(ngModel)]="data.correo">
+    
+  </mat-form-field>
+  <p>¿Cuál es el rut del usuario a cambiar?</p>
+  <mat-form-field>
+    <mat-label>Rut</mat-label>
+    <input matInput [(ngModel)]="data.rut">
   </mat-form-field>
 </div>
 
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <app-usuario #Micompo></app-usuario>
+  <button mat-button (click)="onNoClick()">Mejor no</button>
   
-  <button mat-button (click)="Micompo.actualizarcorreo(data.correo)" [mat-dialog-close]="data.correo" cdkFocusInitial>Ok</button>
+  
+  <button mat-button (click)="actualizarcorreo(data.correo,data.rut)" [mat-dialog-close]="data.correo" cdkFocusInitial>Ok</button>
 </div>
